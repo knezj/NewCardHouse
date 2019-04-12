@@ -14,6 +14,7 @@ function initApp(){
     var $photo = $("#takePhoto");
 
 
+
     $photo.on("click", takePhoto);
     $prompt.on("click", dialogPrompt);
 
