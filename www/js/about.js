@@ -24,6 +24,7 @@ function initApp(){
        // $imgPlayer2.src = "../img/candace.png";
 
         var imgtag = "<img alt=\"phineus\" height=\"50\" width=\"50\" src=\"../img/phineaus.png\" >";
+        console.log(imgtag);
         $('#imgPhoto1').prepend(imgtag);
         navigator.notification.alert("photo1 alert",null,"photo2 Alert", "Close");
         e.preventDefault();
