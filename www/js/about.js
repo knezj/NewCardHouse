@@ -21,6 +21,7 @@ function initApp(){
 
     $photo1.on("click", function(e) {
 
+
         //var $imgPlayer2 = $("#imgPlayer2");
        // $imgPlayer2.src = "../img/candace.png";
 
