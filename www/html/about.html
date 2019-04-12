@@ -20,37 +20,75 @@
 
     <title>NewCardHouse Rules </title>
 </head>
+
+<style>
+
+    #alertPrompt{
+        margin-left: 50%;
+        margin-bottom: 10vw;
+
+    }
+
+    #inputNameForm{
+        margin-left: 5%;
+        margin-bottom: 5vw;
+
+    }
+
+    .takePicTitle{
+        margin-left: 5%;
+        margin-bottom: 5vw;
+        font-size: medium;
+
+    }
+
+</style>
+
 <body>
 
 
 <main data-role="page" id="ruleshome">
 
     <div class=" container-flex ">
-        <div class="row  mx-auto text-center">
-            <a id="alertPrompt" class="btn btn-warning btn-lg" href="#" role="button">
-                Alert Prompt
+
+        <div class="row mx-auto text-center">
+
+            <a id="alertPrompt" class="btn btn-success btn-lg" href="#" role="button">
+                Play Game!
             </a>
+
+        </div>
+
+
+        <div class="row  mx-auto text-center">
+            <form id="inputNameForm">
+                Enter name:
+                <input name="firstname" type="text">
+                <br><br>
+                <input type="submit">
+            </form>
         </div>
 
         <div class="row mx-auto text-center">
-            <header class="col-sm-12">
-                <h3>Picture Application!</h3>
-            </header>
+
+                <span class="takePicTitle">Picture Application!</span>
+
         </div>
 
         <div class="row mx-auto text-center">
             <div class="offset-sm-1 col-sm-10">
-                <img id="img" class="img-thumbnail rounded mx-auto d-block" alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                <img id="img" class="img-thumbnail rounded mx-auto d-block" alt=""
+                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
             </div>
         </div>
 
         <div class="row mx-auto text-center">
             <div class="col-sm-12">
-                <a id="takePhoto" class="btn btn-success btn-lg" href="#" role="button">
+                <a id="takePhoto" class="btn btn-primary btn-lg" href="#" role="button">
                     Take Picture
                 </a>
                 <div>
-                    <img alt="phineus" height="50" width="50" src="../img/phineaus.png" >
+                    <img alt="phineus" height="50" width="50" src="../img/phineaus.png">
 
                 </div>
             </div>
@@ -70,8 +108,9 @@
 
             </div>
             <div class="col-6">
-                <div id="imgPhoto2"  class="row">Place Candace here
-                    <img id="imgPlayer3" class="img-thumbnail rounded mx-auto d-block" alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                <div id="imgPhoto2" class="row">Place Candace here
+                    <img id="imgPlayer3" class="img-thumbnail rounded mx-auto d-block" alt=""
+                         src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
 
 
                 </div>
@@ -82,12 +121,10 @@
             </div>
 
 
-
         </div>
 
 
     </div>
-
 
 
 </main>
