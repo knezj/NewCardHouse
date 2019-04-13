@@ -7,46 +7,92 @@ $.when(cordovaReady,jpmReady).then(initApp());
 
 function initApp(){
 
+    var $candace = $("#Candace");
+    var $doofenschmirtz = $("#Doofenshmirtz");
+    var $isabella = $("#Isabella");
+    var $phineus = $("#Phineus");
+    var $ferb = $("#Ferb");
+    var $msfletcher = $("#MsFletcher");
 
-    var $prompt = $("#alertPrompt");
-    var $photo1 = $("#placePic1");
-    var $photo2 = $("#placePic2");
     var $photo = $("#takePhoto");
+    var $btnPlayers = $(".btn");
 
 
+
+
+    $candace.on("click", placePlayer);
+
+    $doofenschmirtz.on("click", placePlayer);
+
+    $isabella.on("click", placePlayer);
+
+    $phineus.on("click", placePlayer);
+
+    $ferb.on("click", placePlayer);
+
+    $msfletcher.on("click", placePlayer);
 
     $photo.on("click", takePhoto);
-    $prompt.on("click", dialogPrompt);
+
+    var counter = (function() {
+        var privateCounter = 0;
+        function changeBy(val) {
+            privateCounter += val;
+        }
+        return {
+            increment: function() {
+                changeBy(1);
+            },
+
+            value: function() {
+                return privateCounter;
+            }
+        };
+    })();
+
+    function placePlayer(e){
+        //console.log(e.target.id);
 
 
-    $photo1.on("click", function(e) {
+        if (e.target.id == "Candace"){
+            console.log("candace clicked");
+            counter.increment();
+
+        }
+
+        else if (e.target.id == "Doofenshmirtz"){
+
+            console.log("nlong");
+            counter.increment();
+
+        }
+
+        else if (e.target.id == "Isabella"){
+
+            console.log("isabella clikck");
+            counter.increment();
+
+        }
+
+        else{
+            console.log("yayayay");
+        }
+
+        console.log(counter.value())
+
+        var count = counter.value();
+
+        if (count > 3){
 
 
-        //var $imgPlayer2 = $("#imgPlayer2");
-       // $imgPlayer2.src = "../img/candace.png";
+            $btnPlayers.hide();
 
-        var imgtag = "<img alt=\"phineus\" height=\"50\" width=\"50\" src=\"../img/phineaus.png\" >";
-        console.log(imgtag);
-        $('#imgPhoto1').prepend(imgtag);
-        navigator.notification.alert("photo1 alert",null,"photo2 Alert", "Close");
-        e.preventDefault();
-    });
+        }
 
 
 
 
-    $photo2.on("click", function(e) {
-
-        //var $imgPlayer3 = $("#imgPlayer3");
-        //$imgPlayer3.src = "../img/phineaus.png";
-
-        var $img = $('#imgPhoto2');
-        var imgtag = "<img id=\"my_img2\" alt=\"candace\" height=\"50\" width=\"50\"   src=\"../img/candace.png\" /> ";
-        $img.prepend(imgtag);
-        navigator.notification.alert("photo2 alert",null,"photo2 Alert", "Close");
-        e.preventDefault();
-    });
-
+    }
 
 
     function dialogPrompt() {
@@ -64,22 +110,6 @@ function initApp(){
 
     }
 
-    function placePhoto1(){
-
-        navigator.notification.alert("photo1 alert",null,"photo1 Alert", "Close");
-
-        img.src = "../img/phineaus.png"
-
-    }
-
-    function placePhoto2(){
-
-        navigator.notification.alert("photo2 alert",null,"photo2 Alert", "Close");
-
-
-        img.src = "../img/candace.png"
-
-    }
 
     function takePhoto() {
         var options = { quality: 25,

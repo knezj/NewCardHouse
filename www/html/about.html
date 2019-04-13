@@ -23,22 +23,52 @@
 
 <style>
 
-    #alertPrompt{
-        margin-left: 50%;
-        margin-bottom: 10vw;
+
+    #inputNameForm {
+        margin-left: 5%;
+        margin-bottom: 5px;
 
     }
 
-    #inputNameForm{
-        margin-left: 5%;
-        margin-bottom: 5vw;
 
+
+    .pickPics {
+
+        position: relative;
+        width: 100%;
+        max-width: 400px;
     }
 
-    .takePicTitle{
-        margin-left: 5%;
-        margin-bottom: 5vw;
-        font-size: medium;
+    .pickPics img {
+        width: 100%;
+        height: auto;
+    }
+
+    .pickPics .btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        background-color: #555;
+        color: white;
+        font-size: 1vw;
+        padding: 1vw 2vw;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .pickPics .btn:hover {
+        background-color: black;
+    }
+
+    header {
+        font-size: large;
+        font-weight: bold;
+        text-align: center;
+
 
     }
 
@@ -51,76 +81,70 @@
 
     <div class=" container-flex ">
 
-        <div class="row mx-auto text-center">
+        <header class="header">
+            Game Center Information
 
-            <a id="alertPrompt" class="btn btn-success btn-lg" href="#" role="button">
-                Play Game!
-            </a>
-
-        </div>
+        </header>
 
 
-        <div class="row  mx-auto text-center">
-            <form id="inputNameForm">
-                Enter name:
-                <input name="firstname" type="text">
-                <br><br>
-                <input type="submit">
-            </form>
-        </div>
-
-        <div class="row mx-auto text-center">
-
-                <span class="takePicTitle">Picture Application!</span>
-
-        </div>
-
-        <div class="row mx-auto text-center">
-            <div class="offset-sm-1 col-sm-10">
-                <img id="img" class="img-thumbnail rounded mx-auto d-block" alt=""
-                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+        <form>
+            <div class="form-group">
+                <label for="nameInput">Please Enter Your Name:</label>
+                <input type="text" class="form-control" id="nameInput" placeholder="Please enter your name here">
             </div>
-        </div>
+        </form>
 
-        <div class="row mx-auto text-center">
-            <div class="col-sm-12">
-                <a id="takePhoto" class="btn btn-primary btn-lg" href="#" role="button">
-                    Take Picture
-                </a>
-                <div>
-                    <img alt="phineus" height="50" width="50" src="../img/phineaus.png">
 
+
+            <div class="container-fluid pickPics">
+
+            <p>Pick three players to play against: </p>
+
+            <div class="row rowone">
+
+                <div class="col-4 pickPics">
+                    <img alt="candace" style="width:100%"  src="../img/candace.png">
+                    <button id = "Candace" class="btn">Candace</button>
                 </div>
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col-6">
-                <div id="imgPhoto1" class="row">Place Phineus here
-
-
+                <div class="col-4 pickPics">
+                    <img alt="doofenshmirtz" style="width:100%" src="../img/Heinz_Doofenshmirtz.png">
+                    <button id="Doofenshmirtz" class="btn">Doofenshmirtz</button>
+                </div>
+                <div class="col-4 pickPics">
+                    <img alt="isabella"  style="width:100%" src="../img/isabella.png">
+                    <button id="Isabella"  class="btn">Isabella</button>
                 </div>
 
-                <a id="placePic1" class="btn btn-info btn-sm" href="#" role="button">
-                    PlacePic1
-                </a>
-
             </div>
-            <div class="col-6">
-                <div id="imgPhoto2" class="row">Place Candace here
-                    <img id="imgPlayer3" class="img-thumbnail rounded mx-auto d-block" alt=""
-                         src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
 
+            <div class="row rowtwo">
 
+                <div class="col-4 pickPics">
+                    <img alt="phineus" style="width:100%" src="../img/phineaus.png">
+                    <button id="Phineus"  class="btn">Phineus</button>
                 </div>
-                <a id="placePic2" class="btn btn-info btn-sm" href="#" role="button">
-                    PlacePic2
-                </a>
+                <div class="col-4 pickPics">
+                    <img alt="ferb"  style="width:100%" src="../img/ferb.png">
+                    <button id="Ferb" class="btn">Ferb</button>
+                </div>
+                <div class="col-4 pickPics">
+                    <img alt="msfletcher" style="width:100%"  src="../img/msfletcher.png">
+                    <button id="MsFletcher"  class="btn">MsFletcher</button>
+                </div>
 
             </div>
 
 
+        </div>
+
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col-12">
+                    <a id="takePhoto" class="btn btn-success btn-block text-center"  >
+                        Take My Pic!
+                    </a>
+                </div>
+            </div>
         </div>
 
 
