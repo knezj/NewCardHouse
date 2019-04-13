@@ -86,14 +86,25 @@
 
         </header>
 
-
         <form>
-            <div class="form-group">
-                <label for="nameInput">Please Enter Your Name:</label>
-                <input type="text" class="form-control" id="nameInput" placeholder="Please enter your name here">
-            </div>
-        </form>
+            <!-- Grid row -->
+            <div class="form-row align-items-center">
+                <!-- Grid column -->
+                <div class="col-auto">
+                    <!-- Default input -->
+                    <label class="sr-only" for="inlineFormInput">Name</label>
+                    <input type="text" class="form-control mb-2" id="inlineFormInput" style="margin-top: 1vw"  placeholder="Enter your name here">
+                </div>
 
+
+
+                <!-- Grid column -->
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary btn-md mt-0">Submit</button>
+                </div>
+            </div>
+            <!-- Grid row -->
+        </form>
 
 
             <div class="container-fluid pickPics">
@@ -121,7 +132,7 @@
 
                 <div class="col-4 pickPics">
                     <img alt="phineus" style="width:100%" src="../img/phineaus.png">
-                    <button id="Phineus"  class="btn">Phineus</button>
+                    <button id="Phineaus"  class="btn">Phineus</button>
                 </div>
                 <div class="col-4 pickPics">
                     <img alt="ferb"  style="width:100%" src="../img/ferb.png">
