@@ -15,11 +15,14 @@ function initApp() {
     var $msfletcher = $("#MsFletcher");
 
     var $photo = $("#takePhoto");
-    var $btnPlayers = $(".btn");
+    var $btnPlayers = $(".btnCharacters");
     var $formInputName = $("#inlineFormInput");
+    var $btnSubmitName = $("#btnSubmitName");
 
     $photo.on("click", takePhoto);
-    $formInputName.on("click", saveName);
+    $btnSubmitName.on("click", saveName);
+
+
 
 
     $candace.on("click", placePlayer);
@@ -35,6 +38,10 @@ function initApp() {
     $msfletcher.on("click", placePlayer);
 
 
+
+
+
+    // keeps a counter working inside the placeplayer function (closures)
     var counter = (function () {
         var privateCounter = 0;
 
@@ -95,11 +102,10 @@ function initApp() {
 
         var count = counter.value();
 
+
+        // if picked more than 3 characters then diable the buttons
         if (count > 3) {
-
-
             $btnPlayers.hide();
-
         }
 
 
@@ -107,7 +113,10 @@ function initApp() {
 
     function saveName(e) {
 
-        //console.log(e.target.id);
+        var input = $formInputName.val();
+
+        console.log(input);
+
         e.preventDefault();
 
     }
@@ -152,7 +161,7 @@ function initApp() {
         // We must use Camera.DestinationType.FILE_URI  most of the time - see above!
         image.src = imageData;
 
-        navigator.notification.alert("notify alert", null, "Test Alert", "Close");
+        navigator.notification.alert("Your picture was taken!", null, "Picture Alert", "Close");
 
         // Use this only if you need raw image data.
         // You also must activate Camera.DestinationType.DATA_URL option above.
